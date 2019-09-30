@@ -1,11 +1,11 @@
 # Programming homework 1
-- Akerman's function
+## Akerman's function
 Accroding to the recursive formula, set three condition: 
 1. if (m==0)
 2. else if (n == 0)
 3. else
 
-- powerset
+## powerset
 In main function use vector to store elements and pass to powerset function.
 In powerset function, there are two condition:
 1. if the vector is empty then return 2D vector with one vector contain empty string
