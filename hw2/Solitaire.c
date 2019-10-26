@@ -18,10 +18,8 @@ int main(){
 
     shuffle(deck, deck_length);
 
-    // print initial deck
-    print_deck(deck, deck_length);
-
     while(drop>0){
+        print_deck(deck, drop);
         if (deck[0]==drop){
             // drop the card
             shift_array(deck, deck_length, drop);
@@ -31,7 +29,6 @@ int main(){
             // shift array left
             shift_array(deck, deck_length, drop);
         }
-        print_deck(deck, drop);
     }
 
     return 0;
@@ -55,11 +52,14 @@ void shuffle(int* deck, int len){
 
 void print_deck(int* deck, int len){
     for(int i=0; i<len; i++){
-        if (deck[i]<11)
+        if (deck[i]<11 && deck[i]>1){
             printf("%d ", deck[i]);
+        }
         else{
             char display;
-            if (deck[i]==11)
+            if (deck[i]==1)
+                display = 'A';
+            else if (deck[i]==11)
                 display = 'J';
             else if (deck[i]==12)
                 display = 'Q';
