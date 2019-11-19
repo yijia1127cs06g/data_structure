@@ -13,7 +13,6 @@ void shuffle(int*, int);
 void insertRear(Node*, int);
 int deleteFront(Node*);
 void printDeck(Node*);
-int getFirstCard(Node*);
 
 
 int main(){
@@ -111,11 +110,3 @@ void printDeck(Node* deck){
     printf("\n");
 }
 
-
-int getFirstCard(Node* deck){
-    if (deck->next){
-        return (deck->next)->card;
-    }else{
-        exit(-1);
-    }
-}
