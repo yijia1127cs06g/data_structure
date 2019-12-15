@@ -1,5 +1,12 @@
 # Data Structure Assignment 5
 ## Monk And Champions League
+keep deleting the max of the heap, until all the people have seat.
+### Function
+#### adjustHeap
+#### createHeap
+#### deleteMax
+#### insertHeap
+
 ## Height Union
 implement two functions: collapsingFind that find node with the collapsing rule, heightUnion that uses the height rule for union operations.
 
