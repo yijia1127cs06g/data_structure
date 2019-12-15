@@ -83,7 +83,15 @@ int collapsingFind(vector<int> &node, vector<int> &heightOrParent, int findingNo
     }
     heightOrParent[idx] = node[tempP];
 
-    return opCount>1?++opCount:opCount;     // for link reset
+    if (opCount <= 1)
+        return opCount;
+    else{   // link reset
+        if (-heightOrParent[tempP]-1 == opCount)
+            heightOrParent[tempP]++;
+        opCount++;
+    }
+
+    return opCount;
 }
 
 int findIdxOfNode(vector<int> node, int findingNode)
